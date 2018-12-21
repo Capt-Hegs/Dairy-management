@@ -1,0 +1,237 @@
+create table provider
+(
+	PID number(10) primary key,
+	Name varchar(20),
+	DOB varchar(15),
+	Address varchar(100),
+	Contact_no number(10),
+	Aadhar_card varchar(15)
+);
+
+create table distributor
+(
+	DID number(5) primary key,
+	Name varchar(20),
+	DOB varchar(15),
+	Address varchar(100),
+	Contact_no number(10),
+	Aadhar_card varchar(15)
+);
+
+create table employee
+(
+	EID number(5) primary key,
+	Name varchar(20),
+	DOB varchar(15),
+	Address varchar(100),
+	Contact_no number(10),
+	Aadhar_card varchar(15),
+	Position varchar(20),
+	Salary real
+);
+
+create table input
+(
+	Sl_no int,
+	Dates varchar(15),
+	Quantity real,
+	Area varchar(20),
+	Cost_per_ltr_of_milk real,
+	Total_payment real,
+	primary key (Sl_no),
+	foreign key (Dates) references milk (Dates)
+);
+
+create table milk
+(
+	Dates varchar(15),
+	Total_milk_input real,
+	Cost_per_ltr_of_milk real,
+	Total_payment real,
+	primary key (Dates)
+);
+
+create table packet
+(
+	Sl_no int,
+	Dates varchar(15),
+	Packets_manufactured real,
+	Cost_per_pack real,
+	Total_cost real,
+	primary key (Total_cost),
+	foreign key (Dates) references milk (Dates)
+);
+
+create table money
+(
+	Sl_no int,
+	Dates varchar(15),
+	Packets_processed real,
+	Cost_per_packet real,
+	Total_incoming real,
+	Total_payment_for_milk real,
+	Total_payment_for_packets real,
+	Total_outgoing real,
+	Profit real,
+	primary key (Sl_no),
+	foreign key (Dates) references milk (Dates),
+	foreign key (Total_payment_for_packets) references packet (Total_cost)
+);
+
+
+
+
+
+insert all
+into provider values('110512032','Akash Naik','01-03-1982','Shreenivasa,Bilgi,Siddhapura,UK','9568423785','4526 4585 4559')
+into provider values('110512012','Abhishek Bhat','23-04-1983','Shreenidhi,Bilgi,Siddhapura,UK','9362514785','6223 2456 4458')
+into provider values('110613003','Adarsh Hegde','15-07-1985','Anugraha,Janmane,Sirsi,UK','9845236524','9325 4298 4528')
+into provider values('110613004','Darshan Gouda','07-05-1980','Shriprasanna,Janmane,Sirsi,UK','9562314785','1475 2563 1258')
+into provider values('110614032','Akshay N A','03-02-1978','Abhibhava,Heggarni,Sirsi,UK','9547812364','1856 4569 1258')
+into provider values('110614033','Shravan K R','17-10-1980','Sourabha,Heggarni,Sirsi,UK','9654238512','2365 1254 1247')
+into provider values('110801001','Varsha K M','05-03-1985','Lakshminilaya,Kirwatti,Yellapura,UK','9535146253','4256 1478 2569')
+into provider values('110801002','Varun Hegde','03-03-1985','Vaikuntta,Kirwatti,Yellapura,UK','9482055744','8592 0544 3886')
+select * from dual;
+
+
+insert all
+into distributor values('1105','R N Shetti','12-12-1982','Ashrita,Halgere,Siddhapura,UK','9326541286','4556 1252 4486')
+into distributor values('1106','P N Shetty','15-11-1980','Benaka,Devikere,Sirsi,UK','9596849123','6652 4528 9632')
+into distributor values('1108','Raju Naik','19-08-1982','Prarthana,Nadig galli,Yellapura,UK','9125475852','6542 1235 8596')
+into distributor values('1202','Suresh Bant','25-04-1979','Gajendra,Kajubag,Karwar,UK','9933959684','8852 6592 1235')
+into distributor values('1203','Imran Khan','08-09-1981','Feroz Mahal,Muslim Galli,Bhatkal,UK','9362561423','7589 6582 1256')
+select * from dual;
+
+
+insert all
+into employee values('121','Siddharth Venekar','12-06-1987','Aaradhana,CP Bazar,Sirsi,UK','9632587412','4556 4253 1256','Manager','100000')
+into employee values('122','Sohan Kumar','22-04-1985','Kalpavraksha,Hanumanti,Sirsi,UK','9874563210','9652 5623 1258','Accountant','75000')
+into employee values('123','Prashant Advani','09-01-1990','Dhanvantari,Kolgibees,Sirsi,UK','9125638740','1456 8965 2589','Asst.Manager','80000')
+into employee values('124','Ganesh Prabhu','19-08-1989','Samanvitha,KHB Colony,Sirsi,UK','9658214956','7458 6522 1221','Driver','25000')
+into employee values('125','Sandhya S','29-12-1986','Sameeksha,Harugar,Sirsi,UK','9896596210','8856 3326 1244','Secretary','30000')
+select * from dual;
+
+
+insert all
+into input values('1','01-10-2018','500','Sirsi','38','19000')
+into input values('2','01-10-2018','420','Siddhapura','38','15960')
+into input values('3','01-10-2018','470','Yellapura','38','17860')
+into input values('4','02-10-2018','550','Sirsi','38','20900')
+into input values('5','02-10-2018','470','Siddhapura','38','17860')
+into input values('6','02-10-2018','430','Yellapura','38','16340')
+into input values('7','03-10-2018','530','Sirsi','38','20140')
+into input values('8','03-10-2018','485','Siddhapura','38','18430')
+into input values('9','03-10-2018','495','Yellapura','38','18810')
+into input values('10','04-10-2018','520','Sirsi','38','19760')
+into input values('11','04-10-2018','465','Siddhapura','38','17670')
+into input values('12','04-10-2018','432','Yellapura','38','16416')
+into input values('13','05-10-2018','512','Sirsi','38','19456')
+into input values('14','05-10-2018','486','Siddhapura','38','18468')
+into input values('15','05-10-2018','485','Yellapura','38','18430')
+into input values('16','06-10-2018','532','Sirsi','39','20748')
+into input values('17','06-10-2018','456','Siddhapura','39','17784')
+into input values('18','06-10-2018','425','Yellapura','39','16575')
+into input values('19','07-10-2018','532','Sirsi','39','20748')
+into input values('20','07-10-2018','426','Siddhapura','39','16614')
+into input values('21','07-10-2018','478','Yellapura','39','18642')
+into input values('22','08-10-2018','512','Sirsi','39','19968')
+into input values('23','08-10-2018','478','Siddhapura','39','18642')
+into input values('24','08-10-2018','498','Yellapura','39','19422')
+into input values('25','09-10-2018','536','Sirsi','39','20904')
+into input values('26','09-10-2018','456','Siddhapura','39','17784')
+into input values('27','09-10-2018','489','Yellapura','39','19071')
+into input values('28','10-10-2018','510','Sirsi','39','19890')
+into input values('29','10-10-2018','495','Siddhapura','39','19305')
+into input values('30','10-10-2018','473','Yellapura','39','18447')
+select * from dual;
+
+
+insert all
+into milk values('01-10-2018','1390','38','52820')
+into milk values('02-10-2018','1450','38','55100')
+into milk values('03-10-2018','1510','38','57380')
+into milk values('04-10-2018','1417','38','53846')
+into milk values('05-10-2018','1483','38','56354')
+into milk values('06-10-2018','1413','39','55107')
+into milk values('07-10-2018','1436','39','56004')
+into milk values('08-10-2018','1488','39','58032')
+into milk values('09-10-2018','1481','39','57759')
+into milk values('10-10-2018','1478','39','57642')
+select * from dual;
+
+
+insert all
+into packet values('1','01-10-2018','2780','3','8340')
+into packet values('2','02-10-2018','2900','3','8700')
+into packet values('3','03-10-2018','3020','3','9060')
+into packet values('4','04-10-2018','2834','3','8502')
+into packet values('5','05-10-2018','2966','3','8898')
+into packet values('6','06-10-2018','2826','4','11304')
+into packet values('7','07-10-2018','2872','4','11488')
+into packet values('8','08-10-2018','2976','4','11904')
+into packet values('9','09-10-2018','2962','4','11848')
+into packet values('10','10-10-2018','2956','4','11824')
+select * from dual;
+
+
+insert all
+into money values('1','01-10-2018','2780','24','66720','52820','8340','61160','5560')
+into money values('2','02-10-2018','2900','24','69600','55100','8700','63800','5800')
+into money values('3','03-10-2018','3020','24','72480','57380','9060','66440','6040')
+into money values('4','04-10-2018','2834','24','68016','53846','8502','62348','5668')
+into money values('5','05-10-2018','2966','24','71184','56354','8898','65252','5932')
+into money values('6','06-10-2018','2826','26','73476','55107','11304','66411','7065')
+into money values('7','07-10-2018','2872','26','74672','56004','11488','67492','7180')
+into money values('8','08-10-2018','2976','26','77376','58032','11904','69936','7440')
+into money values('9','09-10-2018','2962','26','77012','57759','11848','69607','7405')
+into money values('10','10-10-2018','2956','26','76856','57642','11824','69466','7390')
+select * from dual;
+
+
+
+
+1)Retrive the names and salaries of the employees of the position 'manager' and salary greater than '79000'.
+select Name,Salary
+from employee
+where Position like'%Manager' and
+	  Salary>79000;
+	  
+	  
+2)Print the profits earned on days when the cost per ltr of milk given for the provider was Rs.38.
+select m.Dates,m.Profit
+from money m,milk l
+where m.Dates=l.Dates and
+	  l.Cost_per_ltr_of_milk='38';
+	  
+
+3)Print the total profit earned on days when cost per ltr of milk was 38 and provided form sirsi.
+select sum(Quantity)
+from input
+where Area='Sirsi' and
+		Cost_per_ltr_of_milk='38'
+	  group by (Area);
+	  
+	  
+
+	  
+4)Retrive the data for dates,packets manufactured & total cost when the incoming amount is less than 70000.
+select Packets_manufactured,Total_cost,Dates
+from packet
+where Dates in (select Dates
+				from money
+				where Total_incoming<70000);
+				
+				
+				
+				
+5)Print quantity and area when profit earned is above 6000 and below 7000
+select Dates,Quantity,Area
+from input
+where Dates in (select Dates
+				from milk
+				where Dates in (select Dates
+								from money
+								where Profit between 6000 and 7000));
+		
+		
+

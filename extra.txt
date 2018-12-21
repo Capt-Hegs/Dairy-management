@@ -1,0 +1,97 @@
+•	Casual users: These are the common end users with minimal knowledge about the system. 
+Thereby, the system is designed in a user-friendly manner. 
+They include the providers, distributors, employees who can view the of the sales made and other such personal details.
+
+
+
+
+insert into provider values('110512032','Akash Naik','01-03-1982','Shreenivasa,Bilgi,Siddhapura,UK','9568423785','4526 4585 4559');
+insert into provider values('110512012','Abhishek Bhat','23-04-1983','Shreenidhi,Bilgi,Siddhapura,UK','9362514785','6223 2456 4458');
+insert into provider values('110613003','Adarsh Hegde','15-07-1985','Anugraha,Janmane,Sirsi,UK','9845236524','9325 4298 4528');
+insert into provider values('110613004','Darshan Gouda','07-05-1980','Shriprasanna,Janmane,Sirsi,UK','9562314785','1475 2563 1258');
+insert into provider values('110614032','Akshay N A','03-02-1978','Abhibhava,Heggarni,Sirsi,UK','9547812364','1856 4569 1258');
+insert into provider values('110614033','Shravan K R','17-10-1980','Sourabha,Heggarni,Sirsi,UK','9654238512','2365 1254 1247');
+insert into provider values('110801001','Varsha K M','05-03-1985','Lakshminilaya,Kirwatti,Yellapura,UK','9535146253','4256 1478 2569');
+insert into provider values('110801002','Varun Hegde','03-03-1985','Vaikuntta,Kirwatti,Yellapura,UK','9482055744','8592 0544 3886');
+
+
+insert into distributor values('1105','R N Shetti','12-12-1982','Ashrita,Halgere,Siddhapura,UK','9326541286','4556 1252 4486');
+insert into distributor values('1106','P N Shetty','15-11-1980','Benaka,Devikere,Sirsi,UK','9596849123','6652 4528 9632');
+insert into distributor values('1108','Raju Naik','19-08-1982','Prarthana,Nadig galli,Yellapura,UK','9125475852','6542 1235 8596');
+insert into distributor values('1202','Suresh Bant','25-04-1979','Gajendra,Kajubag,Karwar,UK','9933959684','8852 6592 1235');
+insert into distributor values('1203','Imran Khan','08-09-1981','Feroz Mahal,Muslim Galli,Bhatkal,UK','9362561423','7589 6582 1256');
+
+
+insert into employee values('121','Siddharth Venekar','12-06-1987','Aaradhana,CP Bazar,Sirsi,UK','9632587412','4556 4253 1256','Manager','100000');
+insert into employee values('122','Sohan Kumar','22-04-1985','Kalpavraksha,Hanumanti,Sirsi,UK','9874563210','9652 5623 1258','Accountant','75000');
+insert into employee values('123','Prashant Advani','09-01-1990','Dhanvantari,Kolgibees,Sirsi,UK','9125638740','1456 8965 2589','Asst.Manager','80000');
+insert into employee values('124','Ganesh Prabhu','19-08-1989','Samanvitha,KHB Colony,Sirsi,UK','9658214956','7458 6522 1221','Driver','25000');
+insert into employee values('125','Sandhya S','29-12-1986','Sameeksha,Harugar,Sirsi,UK','9896596210','8856 3326 1244','Secretary','30000');
+
+
+insert into input values('1','01-10-2018','500','Sirsi','38','19000');
+insert into input values('2','01-10-2018','420','Siddhapura','38','15960');
+insert into input values('3','01-10-2018','470','Yellapura','38','17860');
+insert into input values('4','02-10-2018','550','Sirsi','38','20900');
+insert into input values('5','02-10-2018','470','Siddhapura','38','17860');
+insert into input values('6','02-10-2018','430','Yellapura','38','16340');
+insert into input values('7','03-10-2018','530','Sirsi','38','20140');
+insert into input values('8','03-10-2018','485','Siddhapura','38','18430');
+insert into input values('9','03-10-2018','495','Yellapura','38','18810');
+insert into input values('10','04-10-2018','520','Sirsi','38','19760');
+insert into input values('11','04-10-2018','465','Siddhapura','38','17670');
+insert into input values('12','04-10-2018','432','Yellapura','38','16416');
+insert into input values('13','05-10-2018','512','Sirsi','38','19456');
+insert into input values('14','05-10-2018','486','Siddhapura','38','18468');
+insert into input values('15','05-10-2018','485','Yellapura','38','18430');
+insert into input values('16','06-10-2018','532','Sirsi','39','20748');
+insert into input values('17','06-10-2018','456','Siddhapura','39','17784');
+insert into input values('18','06-10-2018','425','Yellapura','39','16575');
+insert into input values('19','07-10-2018','532','Sirsi','39','20748');
+insert into input values('20','07-10-2018','426','Siddhapura','39','16614');
+insert into input values('21','07-10-2018','478','Yellapura','39','18642');
+insert into input values('22','08-10-2018','512','Sirsi','39','19968');
+insert into input values('23','08-10-2018','478','Siddhapura','39','18642');
+insert into input values('24','08-10-2018','498','Yellapura','39','19422');
+insert into input values('25','09-10-2018','536','Sirsi','39','20904');
+insert into input values('26','09-10-2018','456','Siddhapura','39','17784');
+insert into input values('27','09-10-2018','489','Yellapura','39','19071');
+insert into input values('28','10-10-2018','510','Sirsi','39','19890');
+insert into input values('29','10-10-2018','495','Siddhapura','39','19305');
+insert into input values('30','10-10-2018','473','Yellapura','39','18447');
+
+
+insert into milk values('01-10-2018','1390','38','52820');
+insert into milk values('02-10-2018','1450','38','55100');
+insert into milk values('03-10-2018','1510','38','57380');
+insert into milk values('04-10-2018','1417','38','53846');
+insert into milk values('05-10-2018','1483','38','56354');
+insert into milk values('06-10-2018','1413','39','55107');
+insert into milk values('07-10-2018','1436','39','56004');
+insert into milk values('08-10-2018','1488','39','58032');
+insert into milk values('09-10-2018','1481','39','57759');
+insert into milk values('10-10-2018','1478','39','57642');
+
+
+insert into packet values('1','01-10-2018','2780','3','8340');
+insert into packet values('2','02-10-2018','2900','3','8700');
+insert into packet values('3','03-10-2018','3020','3','9060');
+insert into packet values('4','04-10-2018','2834','3','8502');
+insert into packet values('5','05-10-2018','2966','3','8898');
+insert into packet values('6','06-10-2018','2826','4','11304');
+insert into packet values('7','07-10-2018','2872','4','11488');
+insert into packet values('8','08-10-2018','2976','4','11904');
+insert into packet values('9','09-10-2018','2962','4','11848');
+insert into packet values('10','10-10-2018','2956','4','11824');
+
+
+insert into money values('1','01-10-2018','2780','24','66720','52820','8340','61160','5560');
+insert into money values('2','02-10-2018','2900','24','69600','55100','8700','63800','5800');
+insert into money values('3','03-10-2018','3020','24','72480','57380','9060','66440','6040');
+insert into money values('4','04-10-2018','2834','24','68016','53846','8502','62348','5668');
+insert into money values('5','05-10-2018','2966','24','71184','56354','8898','65252','5932');
+insert into money values('6','06-10-2018','2826','26','73476','55107','11304','66411','7065');
+insert into money values('7','07-10-2018','2872','26','74672','56004','11488','67492','7180');
+insert into money values('8','08-10-2018','2976','26','77376','58032','11904','69936','7440');
+insert into money values('9','09-10-2018','2962','26','77012','57759','11848','69607','7405');
+insert into money values('10','10-10-2018','2956','26','76856','57642','11824','69466','7390');
